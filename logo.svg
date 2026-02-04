@@ -1,0 +1,52 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="moonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c4b5fd;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1b26;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f0f14;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGradient)" stroke="url(#moonGradient)" stroke-width="2"/>
+  
+  <!-- Moon face -->
+  <circle cx="100" cy="100" r="70" fill="url(#moonGradient)" opacity="0.9" filter="url(#glow)"/>
+  
+  <!-- Moon craters -->
+  <circle cx="85" cy="85" r="8" fill="#6d28d9" opacity="0.3"/>
+  <circle cx="115" cy="90" r="5" fill="#6d28d9" opacity="0.3"/>
+  <circle cx="110" cy="115" r="6" fill="#6d28d9" opacity="0.3"/>
+  <circle cx="90" cy="110" r="4" fill="#6d28d9" opacity="0.3"/>
+  
+  <!-- Browser window -->
+  <rect x="60" y="60" width="80" height="60" rx="8" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  
+  <!-- Browser controls -->
+  <circle cx="70" cy="70" r="3" fill="#ef4444"/>
+  <circle cx="80" cy="70" r="3" fill="#f59e0b"/>
+  <circle cx="90" cy="70" r="3" fill="#10b981"/>
+  
+  <!-- URL bar -->
+  <rect x="70" y="80" width="60" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+  
+  <!-- Content lines -->
+  <rect x="70" y="95" width="50" height="2" rx="1" fill="rgba(255,255,255,0.2)"/>
+  <rect x="70" y="100" width="45" height="2" rx="1" fill="rgba(255,255,255,0.2)"/>
+  <rect x="70" y="105" width="55" height="2" rx="1" fill="rgba(255,255,255,0.2)"/>
+  
+  <!-- Luna text -->
+  <text x="100" y="145" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="url(#moonGradient)" text-anchor="middle">LUNA</text>
+  <text x="100" y="160" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">BROWSER</text>
+</svg>

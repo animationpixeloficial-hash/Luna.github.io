@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luna Browser - Navegación Inteligente con IA</title>
+  <meta name="description" content="Descarga Luna Browser, el navegador web con asistente de IA integrado. Navegación inteligente, privada y gratuita.">
+  <meta name="keywords" content="navegador, browser, IA, inteligencia artificial, Luna, descarga, gratis">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="logo-icon.svg">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="logo-icon.svg" alt="Luna Browser" width="32" height="32">
+        <span>Luna Browser</span>
+      </div>
+      <div class="nav-links">
+        <a href="#features">Características</a>
+        <a href="#download">Descargar</a>
+        <a href="#requirements">Requisitos</a>
+        <a href="#about">Acerca de</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <img src="logo.svg" alt="Luna Browser" class="hero-logo" width="120" height="120">
+          Navegación <span class="gradient-text">Inteligente</span> con IA
+        </h1>
+        <p class="hero-subtitle">
+          Experimenta el futuro de la navegación web con Luna Browser, 
+          el primer navegador con asistente de IA integrado que funciona 
+          completamente en modo local.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn-primary" onclick="downloadForPlatform()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7,10 12,15 17,10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Descargar Gratis
+          </button>
+          <button class="btn-secondary" onclick="scrollToSection('features')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12,6 12,12 16,14"/>
+            </svg>
+            Ver Características
+          </button>
+        </div>
+        <div class="platform-info">
+          <span>Disponible para:</span>
+          <div class="platform-icons">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 12V6.75l9-4.5 9 4.5V12c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12z"/>
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M2 3h20v18H2V3zm2 2v14h16V5H4zm2 2h12v2H6V7zm0 4h12v2H6v-2zm0 4h8v2H6v-2z"/>
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="browser-mockup">
+          <div class="browser-header">
+            <div class="browser-controls">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="browser-url">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <span>luna-browser.com</span>
+            </div>
+          </div>
+          <div class="browser-content">
+            <div class="luna-interface">
+              <div class="luna-chat">
+                <div class="chat-message ai">
+                  <div class="message-avatar">🌙</div>
+                  <div class="message-content">
+                    <p>¡Hola! Soy Luna, tu asistente IA. ¿En qué puedo ayudarte hoy?</p>
+                  </div>
+                </div>
+                <div class="chat-message user">
+                  <div class="message-avatar">👤</div>
+                  <div class="message-content">
+                    <p>Cuéntame un chiste</p>
+                  </div>
+                </div>
+                <div class="chat-message ai">
+                  <div class="message-avatar">🌙</div>
+                  <div class="message-content">
+                    <p>¿Por qué los pájaros no usan Facebook? Porque ya tienen Twitter 🐦</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Características Revolucionarias</h2>
+        <p>Descubre todo lo que hace a Luna Browser único</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1-4 4 4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z"/>
+              <path d="M6 14c-2 1-4 4-4 6a6 6 0 0 0 12 0c0-2-2-5-4-6"/>
+            </svg>
+          </div>
+          <h3>Asistente IA Integrado</h3>
+          <p>Luna AI funciona completamente en modo local, sin necesidad de conexión a internet ni claves API.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Privacidad Total</h3>
+          <p>Tus datos nunca salen de tu dispositivo. Navegación 100% privada y segura.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+            </svg>
+          </div>
+          <h3>Rendimiento Optimizado</h3>
+          <p>Diseñado para ser rápido y ligero, con consumo mínimo de recursos.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <line x1="9" y1="9" x2="15" y2="9"/>
+              <line x1="9" y1="15" x2="15" y2="15"/>
+            </svg>
+          </div>
+          <h3>Múltiples Pestañas</h3>
+          <p>Gestiona múltiples pestañas con una interfaz moderna y eficiente.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            </svg>
+          </div>
+          <h3>Modo Oscuro</h3>
+          <p>Interfaz elegante con modo oscuro integrado para mayor comodidad visual.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <h3>Multiplataforma</h3>
+          <p>Disponible para Windows, macOS y Linux con la misma experiencia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section id="download" class="download">
+    <div class="container">
+      <div class="section-header">
+        <h2>Descarga Luna Browser</h2>
+        <p>Elige tu plataforma y método de instalación preferido</p>
+      </div>
+      <div class="download-grid">
+        <div class="download-card">
+          <div class="platform-icon">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 12V6.75l9-4.5 9 4.5V12c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12z"/>
+            </svg>
+          </div>
+          <h3>Windows</h3>
+          <p>Windows 10 o superior</p>
+          <button class="download-btn" onclick="installWindows()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7,10 12,15 17,10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Descargar .EXE
+          </button>
+        </div>
+        <div class="download-card">
+          <div class="platform-icon">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+          </div>
+          <h3>macOS</h3>
+          <p>macOS 10.15 o superior</p>
+          <button class="download-btn" onclick="installMacOS()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7,10 12,15 17,10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Descargar .DMG
+          </button>
+        </div>
+        <div class="download-card">
+          <div class="platform-icon">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M2 3h20v18H2V3zm2 2v14h16V5H4zm2 2h12v2H6V7zm0 4h12v2H6v-2zm0 4h8v2H6v-2z"/>
+            </svg>
+          </div>
+          <h3>Linux Ubuntu</h3>
+          <p>Ubuntu 20.04 LTS o superior</p>
+          <button class="download-btn" onclick="showLinuxOptions()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7,10 12,15 17,10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Opciones Linux
+          </button>
+        </div>
+        <div class="download-card">
+          <div class="platform-icon">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+            </svg>
+          </div>
+          <h3>Android</h3>
+          <p>Android 7.0 o superior</p>
+          <button class="download-btn" onclick="downloadAPK()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7,10 12,15 17,10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Descargar APK
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Requirements Section -->
+  <section id="requirements" class="requirements">
+    <div class="container">
+      <div class="section-header">
+        <h2>Requisitos del Sistema</h2>
+        <p>Requisitos para cada plataforma</p>
+      </div>
+      <div class="requirements-grid">
+        <div class="requirement-card">
+          <h3>Windows</h3>
+          <ul>
+            <li><strong>Sistema:</strong> Windows 10 o superior</li>
+            <li><strong>Procesador:</strong> Intel Core i3 o AMD equivalente</li>
+            <li><strong>Memoria RAM:</strong> 4 GB</li>
+            <li><strong>Almacenamiento:</strong> 500 MB de espacio libre</li>
+            <li><strong>Arquitectura:</strong> 64-bit (x64)</li>
+          </ul>
+        </div>
+        <div class="requirement-card">
+          <h3>macOS</h3>
+          <ul>
+            <li><strong>Sistema:</strong> macOS 10.15 Catalina o superior</li>
+            <li><strong>Procesador:</strong> Intel Core i5 o Apple Silicon M1/M2</li>
+            <li><strong>Memoria RAM:</strong> 8 GB</li>
+            <li><strong>Almacenamiento:</strong> 500 MB de espacio libre</li>
+            <li><strong>Arquitectura:</strong> Intel 64-bit o Apple Silicon</li>
+          </ul>
+        </div>
+        <div class="requirement-card">
+          <h3>Linux Ubuntu</h3>
+          <ul>
+            <li><strong>Sistema:</strong> Ubuntu 20.04 LTS o superior</li>
+            <li><strong>Procesador:</strong> Intel Core i3 o AMD equivalente</li>
+            <li><strong>Memoria RAM:</strong> 4 GB</li>
+            <li><strong>Almacenamiento:</strong> 500 MB de espacio libre</li>
+            <li><strong>Dependencias:</strong> libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libxcomposite1, libxdamage1, libxrandr2, libgbm1, libxkbcommon0, libasound2</li>
+          </ul>
+        </div>
+        <div class="requirement-card">
+          <h3>Android</h3>
+          <ul>
+            <li><strong>Sistema:</strong> Android 7.0 (Nougat) o superior</li>
+            <li><strong>Procesador:</strong> ARM64 o ARMv7</li>
+            <li><strong>Memoria RAM:</strong> 2 GB mínimo, 4 GB recomendado</li>
+            <li><strong>Almacenamiento:</strong> 200 MB de espacio libre</li>
+            <li><strong>Permisos:</strong> Acceso a internet, almacenamiento</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <img src="logo-icon.svg" alt="Luna Browser" width="32" height="32">
+            <span>Luna Browser</span>
+          </div>
+          <p>El navegador del futuro con inteligencia artificial integrada.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="#features">Características</a></li>
+            <li><a href="#download">Descargar</a></li>
+            <li><a href="#requirements">Requisitos</a></li>
+            <li><a href="#about">Acerca de</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Soporte</h4>
+          <ul>
+            <li><a href="#">Documentación</a></li>
+            <li><a href="#">Guía de uso</a></li>
+            <li><a href="#">Reportar issues</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Licencia</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Luna Browser. Todos los derechos reservados.</p>
+        <p>Hecho con ❤️ por Pablo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
